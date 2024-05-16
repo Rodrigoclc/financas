@@ -1,1 +1,182 @@
-<p>home works!</p>
+<ng-container>
+    <form class="max-w-sm mx-auto mb-4">
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Selecione o
+            Projeto</label>
+        <select id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+            <option>Projeto 1</option>
+            <option>Projeto 2</option>
+            <option>Projeto 3</option>
+        </select>
+    </form>
+
+
+    <div id="accordion-nested-parent" data-accordion="collapse">
+
+        <h2 id="accordion-collapse-heading-2">
+            <button type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+                data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                aria-controls="accordion-collapse-body-2">Transação</button>
+        </h2>
+        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+            <div class="p-5 border border-gray-200 dark:border-gray-700 flex">
+
+                <button type="button"
+                    class="text-white w-1/2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    [routerLink]="['/adicionar-renda']">Renda</button>
+
+                <button type="button"
+                    class="text-white w-1/2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Despesa</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+        <ul class="flex  -mb-px text-sm font-medium text-center" id="default-styled-tab"
+            data-tabs-toggle="#default-styled-tab-content"
+            data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
+            data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            role="tablist">
+            <li class="me-2 w-1/2" role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab"
+                    data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile"
+                    aria-selected="false">Renda</button>
+            </li>
+            <li class="me-2 w-1/2" role="presentation">
+                <button
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                    id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab"
+                    aria-controls="dashboard" aria-selected="false">Despesa</button>
+            </li>
+        </ul>
+    </div>
+    <div id="default-styled-tab-content">
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel"
+            aria-labelledby="profile-tab">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Categoria</p>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+            </div>
+        </div>
+        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel"
+            aria-labelledby="dashboard-tab">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Categoria</p>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div
+        class="w-full mt-5 max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <!-- <div class="flex items-center justify-between mb-4">
+            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
+            <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                View all
+            </a>
+        </div> -->
+        <div class="flow-root">
+            <ul role="list" class=" divide-gray-200 dark:divide-gray-700">
+                <li class=" sm:py-4 divide-y">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+
+                        </div>
+                        <div class="flex-1 min-w-0 ms-4">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Saldo inicial:
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $320
+                        </div>
+                    </div>
+                </li>
+                <li class=" sm:py-4">
+                    <div class="flex items-center ">
+                        <div class="flex-shrink-0">
+
+                        </div>
+                        <div class="flex-1 min-w-0 ms-4">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Renda:
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $3467
+                        </div>
+                    </div>
+                </li>
+                <li class=" sm:py-4">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+
+                        </div>
+                        <div class="flex-1 min-w-0 ms-4">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Despesa:
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $67
+                        </div>
+                    </div>
+                </li>
+                <hr class="mb-3">
+                <li class=" sm:py-4">
+                    <div class="flex items-center ">
+                        <div class="flex-shrink-0">
+
+                        </div>
+                        <div class="flex-1 min-w-0 ms-4">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Saldo final:
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $367
+                        </div>
+                    </div>
+                </li>
+                <!-- <li class="pt-3 pb-0 sm:pt-4">
+                <div class="flex items-center ">
+                    <div class="flex-shrink-0">
+                        
+                    </div>
+                    <div class="flex-1 min-w-0 ms-4">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Thomes Lean
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $2367
+                    </div>
+                </div>
+            </li> -->
+            </ul>
+        </div>
+    </div>
+
+</ng-container>
