@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { initFlowbite } from 'flowbite';
+import { FlowbiteService } from './services/flowbite.service'
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,13 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit {
  
-  title = 'financas';
+  title = 'AguasLindasImoveis';
 
- 
+  constructor(private flowbiteService: FlowbiteService) {}
 
   ngOnInit(): void {
-    initFlowbite();
+    this.flowbiteService.loadFlowbite(flowbite => {
+      console.log('Flowbite loaded', flowbite);
+    });
   }
 }

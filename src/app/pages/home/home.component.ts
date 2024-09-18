@@ -18,9 +18,7 @@ import { RetornoTransacao } from '../../models/IProjetos';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private crudService: CrudService) {
-
-  }
+  constructor(private crudService: CrudService) { }
 
   ngOnInit(): void {
     
@@ -29,7 +27,6 @@ export class HomeComponent implements OnInit {
   listarAllTransacoes(rendaDespesa: string): void {
     const lista: RetornoTransacao[] = [];
     this.crudService.getAllRendas(rendaDespesa).snapshotChanges().subscribe((data) => {
-
       
       data.forEach((item) => {
         let transacao: object = item.payload.toJSON()!;
