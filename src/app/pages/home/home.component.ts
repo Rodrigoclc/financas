@@ -4,6 +4,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { CrudService } from '../../services/crud.service';
 import { RetornoTransacao } from '../../models/IProjetos';
+import { initAccordions, initCollapses, initDrawers, initDropdowns, initTabs } from 'flowbite';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,11 @@ export class HomeComponent implements OnInit {
   constructor(private crudService: CrudService) { }
 
   ngOnInit(): void {
-    
+    initAccordions();
+    initCollapses();
+    initDrawers();
+    initDropdowns();
+    initTabs();
   }
 
   listarAllTransacoes(rendaDespesa: string): void {
